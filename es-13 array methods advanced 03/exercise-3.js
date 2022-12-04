@@ -1,6 +1,9 @@
-function nicknameMap(persons) {
-  let nicknamesArr = persons.map(persons => persons.name + "-" + persons.age);
-  return nicknamesArr;
+function calculateAverageAge(persons) {
+  let total = persons.reduce(
+    (total, current) => total + current.age,0
+  );
+  let average = Math.round(total / persons.length);
+  return average;
 }
 
 const persons = [
@@ -16,6 +19,6 @@ const persons = [
   { name: 'Alice', age: 28 }
 ];
 
-const nicknames = nicknameMap(persons);
+const average = calculateAverageAge(persons);
 console.log(persons);
-console.log(nicknames);
+console.log(average);
