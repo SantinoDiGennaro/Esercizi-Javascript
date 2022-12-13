@@ -21,4 +21,5 @@ const secondPromise = (val) => new Promise ((res,rej)=>{
 firstPromise(isLogged)
 .then ((val)=>secondPromise(val))
 .then ((val)=>console.log(val))
-.catch ((err)=>console.log(err));
+.catch ((err)=>console.log(err))
+.finally(()=>console.log("Promise ended"))
